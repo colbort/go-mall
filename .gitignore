@@ -1,3 +1,11 @@
 mall_docker/data/
 mall_docker/code/
+service/user/rpc/user
+service/user/api/user
+service/product/rpc/product
+service/product/api/product
+service/order/rpc/order
+service/order/api/order
+service/pay/rpc/pay
+service/pay/api/pay
 .idea/
