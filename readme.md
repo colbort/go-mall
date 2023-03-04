@@ -716,3 +716,8 @@ goctl rpc protoc ./rpc/pay.proto --go_out=./rpc/types --go-grpc_out=./rpc/types 
  go run user.go -f etc/pay.yaml Starting rpc server at 127.0.0.1:9003...
  go run user.go -f etc/pay.yaml Starting server at 0.0.0.0:8003...
 ```
+
+- 查看docker容器ip
+```shell
+docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' 容器hash
+```
