@@ -26,49 +26,49 @@ scrape_configs:
     # scheme defaults to 'http'.
 
     static_configs:
-      - targets: ["172.31.112.1:9090"]
+      - targets: ["localhost:9090"]
 
   # 我们自己的商城项目配置
   - job_name: 'mall'
     static_configs:
       # 目标的采集地址
-      - targets: ['172.31.112.1:9080']
+      - targets: ['golang:9080']
         labels:
           # 自定义标签
           app: 'user-api'
           env: 'test'
 
-      - targets: ['172.31.112.1:9090']
+      - targets: ['golang:9090']
         labels:
           app: 'user-rpc'
           env: 'test'
 
-      - targets: ['172.31.112.1:9081']
+      - targets: ['golang:9081']
         labels:
           app: 'product-api'
           env: 'test'
 
-      - targets: ['172.31.112.1:9091']
+      - targets: ['golang:9091']
         labels:
           app: 'product-rpc'
           env: 'test'
 
-      - targets: ['172.31.112.1:9082']
+      - targets: ['golang:9082']
         labels:
           app: 'order-api'
           env: 'test'
 
-      - targets: ['172.31.112.1:9092']
+      - targets: ['golang:9092']
         labels:
           app: 'order-rpc'
           env: 'test'
 
-      - targets: ['172.31.112.1:9083']
+      - targets: ['golang:9083']
         labels:
           app: 'pay-api'
           env: 'test'
 
-      - targets: ['172.31.112.1:9093']
+      - targets: ['golang:9093']
         labels:
           app: 'pay-rpc'
           env: 'test'
