@@ -2,30 +2,30 @@ cd .\service\order\rpc
 go run .\order.go -f .\etc\order.yaml
 
 cd ../../
-cd .\service\product\rpc
+cd .\product\rpc
 go run .\product.go -f .\etc\product.yaml
 
 cd ../../
-cd .\service\order\rpc
+cd .\order\rpc
 go run .\order.go -f .\etc\order.yaml
 
 cd ../../
-cd .\service\pay\rpc
+cd .\pay\rpc
 go run .\pay.go -f .\etc\pay.yaml
 
 
 cd ../../
-cd .\service\user\api\
+cd .\user\api\
 go run .\user.go -f .\etc\user.yaml
 
 cd ../../
-cd .\service\product\api\
+cd .\product\api\
 go run .\product.go -f .\etc\product.yaml
 
 cd ../../
-cd .\service\order\api
+cd .\order\api
 go run .\order.go -f .\etc\order.yaml
 
 cd ../../
-cd .\service\pay\api\
+cd .\pay\api\
 go run .\pay.go -f .\etc\pay.yaml
