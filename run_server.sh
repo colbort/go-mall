@@ -35,5 +35,5 @@ go build ./pay.go
 
 cd ../../
 cd ./pay/api
-go build ./order.go
+go build ./pay.go
 ./pay -f etc/pay.yaml -d
