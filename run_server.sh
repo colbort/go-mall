@@ -3,7 +3,7 @@
 str = $"/n"
 enter = $(echo -e " $str")
 
-cd ./services
+cd ./service
 
 go build ./user/rpc/user.go
 nohup ./user/rpc -f ./user/rpc/etc/user.yaml &
