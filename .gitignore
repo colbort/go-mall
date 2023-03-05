@@ -9,3 +9,5 @@ service/order/api/order
 service/pay/rpc/pay
 service/pay/api/pay
 .idea/
+
+*.out
