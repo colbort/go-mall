@@ -1,7 +1,7 @@
 #!/bin/bash
 
 str = $"\n"
-enter = $(echo -e " $str")
+enter = $(echo -e "$str")
 
 cd ./service
 
