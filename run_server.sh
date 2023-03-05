@@ -1,39 +1,13 @@
-cd ./service
-cd ./user/rpc
-go build ./user.go
-./user -d -f etc/user.yaml
+cd ./services
 
-cd ../../
-cd ./user/api
-go build ./user.go
-./user -d -f etc/user.yaml
+nohup ./user/rpc -f ./user/rpc/etc/user.yaml &
+nohup ./user/api -f ./user/api/etc/user.yaml &
 
-cd ../../
-cd ./product/rpc
-go build ./product.go
-./product -d -f etc/product.yaml
+nohup ./product/rpc -f ./product/rpc/etc/product.yaml &
+nohup ./product/api -f ./product/api/etc/product.yaml &
 
-cd ../../
-cd ./product/api
-go build ./product.go
-./product -d -f etc/product.yaml
+nohup ./order/rpc -f ./order/rpc/order/order.yaml &
+nohup ./order/api -f ./order/api/order/order.yaml &
 
-cd ../../
-cd ./order/rpc
-go build ./order.go
-./order -d -f etc/order.yaml
-
-cd ../../
-cd ./order/api
-go build ./order.go
-./order -d -f etc/order.yaml
-
-cd ../../
-cd ./pay/rpc
-go build ./pay.go
-./pay -d -f etc/pay.yaml
-
-cd ../../
-cd ./pay/api
-go build ./pay.go
-./pay -d -f etc/pay.yaml
+nohup ./pay/rpc -f ./pay/rpc/etc/pay.yaml &
+nohup ./pay/api -f ./pay/api/etc/pay.yaml &
