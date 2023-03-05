@@ -25,11 +25,11 @@ echo "$enter"
 
 go build -o ./order/rpc/order ./order/rpc/order.go
 chmod +x ./order/rpc/order
-nohup ./order/rpc/order -f ./order/rpc/order/order.yaml > ./order/rpc/nohup.out &
+nohup ./order/rpc/order -f ./order/rpc/etc/order.yaml > ./order/rpc/nohup.out &
 echo "$enter"
 go build -o ./order/api/order ./order/api/order.go
 chmod +x ./order/api/order
-nohup ./order/api/order -f ./order/api/order/order.yaml > ./order/api/nohup.out &
+nohup ./order/api/order -f ./order/api/etc/order.yaml > ./order/api/nohup.out &
 echo "$enter"
 
 go build -o ./pay/rpc/pay ./pay/rpc/pay.go
